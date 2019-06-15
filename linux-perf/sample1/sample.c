@@ -6,16 +6,7 @@ struct PrimeNumberNode
     struct PrimeNumberNode *next;
 };
 
-PrimeNumberNode *number(int);
 
-int main(int argc, char *argv[])
-{
-    number(argv[0]);
-    printf("\n");
-
-    number(argv[0]);
-    printf("\n");
-}
 
 int wasteTime(int factor)
 {   
@@ -57,3 +48,14 @@ PrimeNumberNode *number(int input)
 
     return head;
 }
+
+
+int main(int argc, char *argv[])
+{
+    number(argv[0]);
+    printf("\n");
+
+    number(argv[0]);
+    printf("\n");
+}
+
