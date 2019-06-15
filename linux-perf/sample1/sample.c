@@ -4,6 +4,7 @@
 struct PrimeNumberNode
 {
     int prime;
+    int count;
     struct PrimeNumberNode *next;
 };
 
@@ -42,6 +43,7 @@ struct PrimeNumberNode *number(int input)
             struct PrimeNumberNode *primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
             currentNode->next = primeNode;
             currentNode = primeNode;
+            head->count++
         }
     }
 
@@ -50,9 +52,9 @@ struct PrimeNumberNode *number(int input)
 
 int main(int argc, char *argv[])
 {
-    number(atoi(argv[0]));
-    printf("\n");
+    struct PrimeNumberNode* head = number(atoi(argv[0]));
+    printf("%d\n",head->count);
 
-    number(atoi(argv[0]));
-    printf("\n");
+    head = number(atoi(argv[0]));
+    printf("%d\n",head->count);
 }
