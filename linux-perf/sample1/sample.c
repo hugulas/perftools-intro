@@ -24,8 +24,8 @@ struct PrimeNumberNode *number(int input)
     int i;
     int j;
 
-    struct PrimeNumberNode* head = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
-    struct PrimeNumberNode* currentNode = head; 
+    struct PrimeNumberNode *head = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
+    struct PrimeNumberNode *currentNode = head;
     for (i = 3; i < input; i++)
     {
         if (i % 2 == 1)
@@ -33,15 +33,14 @@ struct PrimeNumberNode *number(int input)
             for (j = 2; j < i; j++)
             {
                 int testResult = wasteTime(j);
-		if (testResult % 10000 == 9999)
+                if (testResult % 10000 == 9999)
                     printf("Test code");
-                if (i % j == 0) 
+                if (i % j == 0)
                     continue;
-
             }
-            struct PrimeNumberNode * primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
+            struct PrimeNumberNode *primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
             currentNode->next = primeNode;
-                currentNode = primeNode;
+            currentNode = primeNode;
         }
     }
 
