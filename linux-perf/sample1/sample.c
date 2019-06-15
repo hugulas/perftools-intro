@@ -15,27 +15,33 @@ int wasteTime(int factor)
         testResult += i;
         testResult = testResult * 1;
     }
-    return testResult
+    return testResult;
 }
 
 //  function to get prime number which is very hot
-PrimeNumberNode *number(int input)
+struct PrimeNumberNode *number(int input)
 {
     int i;
     int j;
 
-    head = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
-    currentNode = head for (i = 3; i < input; i++)
+    struct PrimeNumberNode* head = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
+    struct PrimeNumberNode* currentNode = head; 
+    for (i = 3; i < input; i++)
     {
         if (i % 2 == 1)
         {
             for (j = 2; j < i; j++)
             {
-                testResult = wasteTime(j) if (testResult % 10000 == 9999) : printf("Test code") if (i % j == 0) continue
+                int testResult = wasteTime(j);
+		if (testResult % 10000 == 9999)
+                    printf("Test code");
+                if (i % j == 0) 
+                    continue;
+
             }
-            primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
-            currentNode->next = primeNode
-                currentNode = primeNode
+            struct PrimeNumberNode * primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
+            currentNode->next = primeNode;
+                currentNode = primeNode;
         }
     }
 
