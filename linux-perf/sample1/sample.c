@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct PrimeNumberNode
 {
@@ -49,9 +50,9 @@ struct PrimeNumberNode *number(int input)
 
 int main(int argc, char *argv[])
 {
-    number(argv[0]);
+    number(atoi(argv[0]));
     printf("\n");
 
-    number(argv[0]);
+    number(atoi(argv[0]));
     printf("\n");
 }
