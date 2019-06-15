@@ -1,107 +1,59 @@
 #include <stdio.h>
 
-int number(int);
-int ifif();
-int main()
+struct PrimeNumberNode
 {
-    number(20000000);
+    int prime;
+    struct PrimeNumberNode *next;
+};
+
+PrimeNumberNode *number(int);
+
+int main(int argc, char *argv[])
+{
+    number(argv[0]);
     printf("\n");
 
-    printf("start sleep\n");
-    sleep(1);
-    printf("stop sleep\n");
-
-    number(20000001);
+    number(argv[0]);
     printf("\n");
-
-    printf("start sleep\n");
-    sleep(1);
-    printf("stop sleep\n");
-
-    ifif();
-    return 0;
 }
 
-// 1st function which is very hot
-int number(int input)
+int wasteTime(int factor)
+{   
+    int i=0;
+    int testResult;
+    for(i=0;i<factor;i++) {
+        testResult +=i
+        testResult = testResult *1
+    }
+    return testResult
+}
+    
+
+//  function to get prime number which is very hot
+PrimeNumberNode *number(int input)
 {
     int i;
     int j;
 
-    if (input % 2 == 1)
+    head = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
+    currentNode = head
+    for (i = 3; i < input; i++)
     {
-        for (i = 2; i < input; i++)
+        if (i%2==1)
         {
-            for (j = 100000; j > 0; j--) /*for test*/
-            {                            /*for test*/
-                i++;                     /*for test*/
-                i = i * 1;               /*for test*/
-            }
-        }
-    }
-
-    if (input % 2 == 0)
-    {
-        for (i = 2; i < input; i++)
-        {
-
-            for (j = 100000; j > 0; j--)
+            for (j=2;j<i;j++)
             {
-                /*for test
-                                                  *for test
-                                                 */
-                i++;
-                i = i * 1;
+                testResult = wasteTime(j)
+                if (testResult%10000==9999):
+                    printf("Test code") 
+                if (i%j==0)
+                    continue
             }
+            primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
+            currentNode->next = primeNode
+            currentNode = primeNode
         }
     }
 
-    return 1;
-}
-
-int ifif()
-{
-    int i = 1;
-    int j = 2;
-    int k = 1;
-    int l = 1;
-    if (i == j)
-    {
-        number(1000000);
-    }
-    else
-    {
-        number(1000001);
-    }
-    if (i < j)
-    {
-        number(1000000);
-    }
-    else
-    {
-        number(1000001);
-    }
-    j = 1;
-    if (i == j)
-    {
-        number(1000000);
-    }
-    else
-    {
-        number(1000001);
-    }
-    if (i < j)
-    {
-        number(1000000);
-    }
-    else
-    {
-        number(1000001);
-    }
-
-    for (k = 10000000; k > 0; k--)
-    {
-        l++;
-        l = k * 1;
-    }
+    return head;
 }
