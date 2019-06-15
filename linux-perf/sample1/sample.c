@@ -6,19 +6,17 @@ struct PrimeNumberNode
     struct PrimeNumberNode *next;
 };
 
-
-
 int wasteTime(int factor)
-{   
-    int i=0;
+{
+    int i = 0;
     int testResult;
-    for(i=0;i<factor;i++) {
-        testResult +=i
-        testResult = testResult *1
+    for (i = 0; i < factor; i++)
+    {
+        testResult += i;
+        testResult = testResult * 1;
     }
     return testResult
 }
-    
 
 //  function to get prime number which is very hot
 PrimeNumberNode *number(int input)
@@ -27,28 +25,22 @@ PrimeNumberNode *number(int input)
     int j;
 
     head = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
-    currentNode = head
-    for (i = 3; i < input; i++)
+    currentNode = head for (i = 3; i < input; i++)
     {
-        if (i%2==1)
+        if (i % 2 == 1)
         {
-            for (j=2;j<i;j++)
+            for (j = 2; j < i; j++)
             {
-                testResult = wasteTime(j)
-                if (testResult%10000==9999):
-                    printf("Test code") 
-                if (i%j==0)
-                    continue
+                testResult = wasteTime(j) if (testResult % 10000 == 9999) : printf("Test code") if (i % j == 0) continue
             }
             primeNode = (struct PrimeNumberNode *)malloc(sizeof(struct PrimeNumberNode));
             currentNode->next = primeNode
-            currentNode = primeNode
+                currentNode = primeNode
         }
     }
 
     return head;
 }
-
 
 int main(int argc, char *argv[])
 {
@@ -58,4 +50,3 @@ int main(int argc, char *argv[])
     number(argv[0]);
     printf("\n");
 }
-
