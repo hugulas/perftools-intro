@@ -1,7 +1,7 @@
 # Table of contents
 
 * [性能分析工具介绍](README.md)
-* [性能分析的能力重要吗](xing-neng-fen-xi-de-neng-li-zhong-yao-ma.md)
+* [性能分析的能力重要吗](perf-ability.md)
 
 ## Linux Perf教程 <a id="perf"></a>
 
