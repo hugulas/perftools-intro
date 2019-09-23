@@ -1,9 +1,8 @@
 # Table of contents
 
 * [陈沁悦的性能分析专栏](README.md)
-* [性能分析的能力重要吗](perf-ability.md)
+* [开篇-性能分析的能力重要吗](perf-ability.md)
 * [性能分析的军火库](performance-arsenal.md)
-* [性能问题初诊](first-visit-top.md)
 
 ## 性能问题初诊 <a id="first-visit-1"></a>
 
